@@ -6,6 +6,12 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
+
+const openaiTwo = new OpenAI({
+  baseURL: 'https://api.studio.nebius.com/v1/',
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
 export async function POST(req: NextRequest) {
   try {
     const { prompt, size = '1024x1024' } = await req.json();
