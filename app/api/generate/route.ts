@@ -18,13 +18,6 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // await openai.images.generate({
-    //   model: "dall-e-3",
-    //   prompt,
-    //   n: 1,
-    //   size: size as "1024x1024" | "1792x1024" | "1024x1792",
-    // });
-
     const response = await openai.images.generate({
       model: "black-forest-labs/flux-dev",
       response_format: "url",
